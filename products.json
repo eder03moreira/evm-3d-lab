@@ -1,0 +1,7 @@
+[
+  {"id":1,"name":"Axolote articulado","cat":"Articulados","desc":"Peça articulada com visual divertido, disponível sob consulta de cores e tamanho.","image":"assets/exemplo-produto-1.jpg","icon":"🦎","active":true,"sample":true},
+  {"id":2,"name":"Gato articulado","cat":"Articulados","desc":"Miniatura articulada com acabamento decorativo, ideal para presente.","image":"assets/exemplo-produto-2.jpg","icon":"🐈","active":true,"sample":true},
+  {"id":3,"name":"Miniatura temática","cat":"Personalizados","desc":"Miniaturas criativas impressas em 3D. Consulte modelos e possibilidades.","image":"assets/exemplo-produto-3.jpg","icon":"🧸","active":true,"sample":true},
+  {"id":4,"name":"Vaso geométrico","cat":"Decoração","desc":"Vaso decorativo de linhas geométricas para diferentes ambientes.","image":"assets/exemplo-produto-4.jpg","icon":"🪴","active":true,"sample":true},
+  {"id":5,"name":"Chaveiro personalizado","cat":"Chaveiros","desc":"Chaveiros com nome, iniciais ou identidade visual, conforme viabilidade.","image":"assets/exemplo-produto-5.jpg","icon":"🔑","active":true,"sample":true}
+]

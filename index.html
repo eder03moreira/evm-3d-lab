@@ -1,1 +1,97 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10131b"><meta name="description" content="EVM 3D Lab — impressões 3D criativas e personalizadas. Solicite seu orçamento pelo WhatsApp."><title>EVM 3D Lab | Impressões 3D</title><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="#inicio"><span class="brandmark">EVM<span>3D</span></span><small>LAB</small></a><nav><a href="#catalogo">Catálogo</a><a href="#personalizados">Personalizados</a><a href="#sobre">Sobre</a></nav><a class="btn outline" href="https://wa.me/5544998624250" target="_blank" rel="noopener">WhatsApp ↗</a></header><main><section class="hero" id="inicio"><div class="glow"></div><div class="hero-content"><p class="eyebrow">CRIATIVIDADE EM CADA CAMADA</p><h1>Ideias ganham <em>forma.</em></h1><p>Peças criativas, acessórios e projetos personalizados em impressão 3D. Explore o catálogo e solicite um orçamento sem compromisso.</p><div class="actions"><a class="btn" href="#catalogo">Explorar catálogo →</a><a class="btn outline" href="#personalizados">Quero personalizar</a></div><div class="stats"><span>✦ Feito sob medida</span><span>✦ Impressão 3D</span><span>✦ Atendimento direto</span></div></div><div class="hero-art"><div class="cube"><span>3D</span></div><p>DA IDEIA AO REAL</p></div></section><section id="catalogo" class="section"><div class="section-head"><div><p class="eyebrow">EXPLORE POSSIBILIDADES</p><h2>Nosso catálogo</h2><p>Escolha seus favoritos e monte uma solicitação de orçamento.</p></div><button id="quoteOpen" class="btn outline">Minha cotação <b id="count">0</b></button></div><div class="toolbar"><input id="search" type="search" placeholder="Buscar produtos..."><div id="filters" class="filters"></div></div><div id="products" class="products"></div></section><section id="personalizados" class="section feature"><div><p class="eyebrow">DO SEU JEITO</p><h2>Tem uma ideia? Nós damos forma.</h2><p>Brindes, presentes, peças sob encomenda e projetos especiais. Conte o que você imagina e conversamos sobre as possibilidades.</p><a class="btn" href="https://wa.me/5544998624250?text=Ol%C3%A1%21%20Tenho%20uma%20ideia%20para%20impress%C3%A3o%203D%20personalizada." target="_blank" rel="noopener">Solicitar personalizado ↗</a></div><div class="feature-art">✳<span>SEU PROJETO<br>EM 3D</span></div></section><section id="sobre" class="section about"><p class="eyebrow">EVM 3D LAB</p><h2>Detalhes que fazem diferença.</h2><p>Transformamos conceitos em objetos físicos por meio da impressão 3D, com atenção ao acabamento, à funcionalidade e à criatividade.</p></section></main><footer><div class="brand"><span class="brandmark">EVM<span>3D</span></span><small>LAB</small></div><p>Impressão 3D e personalizados</p><div><a href="https://www.instagram.com/evm3dlab/" target="_blank" rel="noopener">@evm3dlab</a> · <a href="https://wa.me/5544998624250" target="_blank" rel="noopener">WhatsApp</a></div><small>© <span id="year"></span> EVM 3D Lab</small></footer><dialog id="quoteDialog"><div class="dialog-head"><h2>Minha cotação</h2><button class="close" data-close="quoteDialog" aria-label="Fechar">×</button></div><div id="quoteItems"></div><label>Observações (opcional)<textarea id="notes" placeholder="Cores, medidas, personalizações..."></textarea></label><button id="sendQuote" class="btn full">Enviar orçamento pelo WhatsApp ↗</button></dialog><dialog id="productDialog"><div class="dialog-head"><h2 id="detailTitle"></h2><button class="close" data-close="productDialog" aria-label="Fechar">×</button></div><div id="detailBody"></div></dialog><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b10">
+  <meta name="description" content="EVM 3D Lab — impressões 3D, presentes personalizados, peças articuladas e decoração. Peça orçamento pelo WhatsApp.">
+  <title>EVM 3D Lab | Impressões 3D & Personalizados</title>
+  <link rel="icon" href="assets/logo-oficial.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M3 8h18l-1.5 13h-15L3 8Z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 7v10l9 5 9-5V7M12 12v10"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M2 8h20M8 2v4m8-4v4M8 15h8m-8 3h8M12 8v5"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 13v-2a9 9 0 0 1 18 0v2M3 13v5a2 2 0 0 0 2 2h2v-8H5a2 2 0 0 0-2 2Zm18 0v5a2 2 0 0 1-2 2h-2v-8h2a2 2 0 0 1 2 2Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.3 11.8a8.3 8.3 0 0 1-12.2 7.3L3 20.4l1.3-5A8.3 8.3 0 1 1 20.3 11.8Z"/><path d="M8 8.5c-.4.7-.5 1.3.1 2.5 1 1.9 2.6 3.4 4.5 4.3 1.1.5 1.9.2 2.5-.3l.8-1.1-2.3-1.1-.9 1.1c-1.5-.7-2.6-1.8-3.4-3.3l1-.9-1.2-2.2L8 8.5Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 1 2.7 8.3L23 12l-8.3 2.7L12 23l-2.7-8.3L1 12l8.3-2.7L12 1Z"/></symbol>
+  </svg>
+
+  <header class="site-header" id="inicio">
+    <div class="header-container">
+      <a class="logo-link" href="#inicio" aria-label="EVM 3D Lab — início">
+        <img class="official-logo" src="assets/logo-oficial.png" alt="Logo oficial EVM 3D Lab">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a class="nav-link selected" href="#inicio">Início</a>
+        <a class="nav-link" href="#catalogo">Catálogo</a>
+        <a class="nav-link" href="#personalizados">Personalizados</a>
+        <a class="nav-link" href="#sobre">Sobre</a>
+        <a class="nav-link" href="#contato">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="quote-icon" id="openQuote" type="button" aria-label="Abrir lista de orçamento">
+          <svg class="icon"><use href="#i-bag"></use></svg><span class="quote-counter" id="quoteCount">0</span>
+        </button>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação para celular" hidden>
+      <a href="#inicio">Início</a><a href="#catalogo">Catálogo</a><a href="#personalizados">Personalizados</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow" id="heroEyebrow">IMPRESSÃO 3D & PERSONALIZADOS</span>
+          <h1 id="heroTitle">Ideias ganham <span>forma.</span></h1>
+          <p id="heroDescription">Peças criativas, acessórios e projetos personalizados em impressão 3D.</p>
+          <div class="hero-buttons"><a class="btn btn-primary" href="#catalogo"><svg class="icon"><use href="#i-grid"></use></svg>Explorar Catálogo</a><a class="btn btn-outline" href="#personalizados"><svg class="icon"><use href="#i-box"></use></svg>Quero Personalizar</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Nossos diferenciais">
+      <div class="container benefits-grid">
+        <div class="benefit"><svg class="icon"><use href="#i-box"></use></svg><div><h2>Feito sob medida</h2><p>Projetos personalizados para a sua ideia.</p></div></div>
+        <div class="benefit"><svg class="icon"><use href="#i-printer"></use></svg><div><h2>Impressão 3D</h2><p>Criatividade, precisão e acabamento.</p></div></div>
+        <div class="benefit"><svg class="icon"><use href="#i-headset"></use></svg><div><h2>Atendimento direto</h2><p>Tire dúvidas e solicite um orçamento.</p></div></div>
+      </div>
+    </section>
+
+    <section class="catalog-section section" id="catalogo" aria-labelledby="catalogTitle">
+      <div class="container">
+        <div class="catalog-head"><div><h2 id="catalogTitle">Nosso <span>Catálogo</span></h2><p>Escolha seus favoritos e monte uma solicitação de orçamento.</p></div><label class="search"><svg class="icon"><use href="#i-search"></use></svg><span class="sr-only">Buscar produtos</span><input id="catalogSearch" type="search" placeholder="Buscar produtos..." autocomplete="off"></label></div>
+        <div class="catalog-filters" id="catalogFilters" role="group" aria-label="Filtrar por categoria"></div>
+        <div class="catalog-grid" id="catalogGrid" aria-live="polite"><p>Carregando catálogo...</p></div>
+        <p class="catalog-disclaimer" id="catalogNote">Imagens demonstrativas. Solicite disponibilidade, cores e prazo pelo WhatsApp.</p>
+      </div>
+    </section>
+
+    <section class="custom-section section" id="personalizados">
+      <div class="container custom-panel"><div><span class="eyebrow">UMA IDEIA SÓ SUA?</span><h2>Do imaginário para o <span>mundo real.</span></h2><p id="customDescription">Brindes, lembranças, acessórios, peças exclusivas e projetos sob encomenda. Compartilhe sua ideia e vamos conversar sobre possibilidades.</p><a class="btn btn-primary" href="https://wa.me/5544998624250?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20impress%C3%A3o%203D%20personalizada." target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-whatsapp"></use></svg>Solicitar Personalizado</a></div><div class="custom-art" aria-hidden="true"><svg class="icon"><use href="#i-sparkle"></use></svg><strong>VOCÊ IMAGINA.<br>NÓS CRIAMOS.</strong></div></div>
+    </section>
+
+    <section class="about-section section" id="sobre"><div class="container about-layout"><div><span class="eyebrow">SOBRE A EVM 3D LAB</span><h2>Detalhes que fazem <span>diferença.</span></h2></div><p id="aboutDescription">Na EVM 3D Lab transformamos ideias em produtos impressos em 3D, com criatividade, cuidado em cada detalhe e atendimento próximo.</p></div></section>
+
+    <section class="contact-section section" id="contato"><div class="container contact-panel"><div><span class="eyebrow">VAMOS CONVERSAR?</span><h2>Seu próximo projeto começa aqui.</h2><p>Fale diretamente com a EVM 3D Lab para consultar modelos, cores e orçamentos.</p></div><a class="btn btn-primary" href="https://wa.me/5544998624250" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-whatsapp"></use></svg>Chamar no WhatsApp</a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><img src="assets/logo-oficial.png" alt="EVM 3D Lab" class="footer-logo"><div><p>Impressão 3D, criatividade e personalização.</p><small>© <span id="currentYear"></span> EVM 3D Lab. Todos os direitos reservados.</small></div><div class="footer-links"><a href="https://www.instagram.com/evm3dlab/" target="_blank" rel="noopener noreferrer">Instagram @evm3dlab</a><a href="https://wa.me/5544998624250" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div></footer>
+
+  <dialog id="productDialog" class="app-dialog"><div class="dialog-top"><h2 id="detailName">Produto</h2><button class="icon-button" data-close="productDialog" aria-label="Fechar detalhes"><svg class="icon"><use href="#i-close"></use></svg></button></div><div id="detailContent"></div></dialog>
+  <dialog id="quoteDialog" class="app-dialog"><div class="dialog-top"><h2>Minha cotação</h2><button class="icon-button" data-close="quoteDialog" aria-label="Fechar cotação"><svg class="icon"><use href="#i-close"></use></svg></button></div><p class="dialog-intro">Confira os itens antes de solicitar o orçamento.</p><div id="quoteList"></div><label class="field-label" for="quoteNotes">Detalhes ou observações</label><textarea id="quoteNotes" rows="3" placeholder="Ex.: prazo, tamanho ou personalizações desejadas..."></textarea><button class="btn btn-primary full" id="sendQuote" type="button"><svg class="icon"><use href="#i-whatsapp"></use></svg>Enviar pelo WhatsApp</button></dialog>
+</body>
+</html>
